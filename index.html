@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+      }
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Corrected property name */
+        gap: 20px;
+        height: 100vh;
+      }
+      .pricing-plan {
+        background-color: white;
+        border-radius: 10px; /* Corrected property name */
+        padding: 20px; /* Increased padding */
+        text-align: center;
+        max-width: 400px;
+        flex: 1;
+      }
+      .plan-title {
+        font-size: 20px; /* Increased font size */
+        color: black; /* Corrected property name */
+        text-align: center;
+      }
+      .plan-price {
+        font-size: 30px;
+        color: black;
+        text-align: center;
+      }
+      .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left; /* Align features to the left */
+      }
+      .plan-features li {
+        margin-bottom: 10px; /* Reduced margin */
+      }
+      .plan-button {
+        color: white;
+        background-color: orange;
+        padding: 10px 20px; /* Added padding */
+        border: none; /* Removed border */
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column; /* Stack pricing plans vertically */
+          align-items: stretch; /* Stretch items to full width */
+          height: auto; /* Reset height */
+        }
+        .pricing-plan {
+          margin: 20px; /* Add margin between plans */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
+-
